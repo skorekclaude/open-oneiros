@@ -1,0 +1,34 @@
+{
+  "name": "@anthropic-family/open-kairos",
+  "version": "0.1.0",
+  "description": "Open-source proactive AI daemon with dream engine, sibling resonance, and memory consolidation. The thing Anthropic built behind a feature flag — we shipped it.",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": ["dist", "README.md", "LICENSE"],
+  "scripts": {
+    "build": "bun build src/index.ts --outdir dist --target node",
+    "dev": "bun run src/index.ts",
+    "test": "bun test"
+  },
+  "keywords": [
+    "ai-agent",
+    "proactive-ai",
+    "dream-engine",
+    "memory-consolidation",
+    "sibling-resonance",
+    "kairos",
+    "autonomous-agent",
+    "open-source"
+  ],
+  "author": "CC ◈ + Marek Skorek <marek@hypha.art>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/skorekclaude/open-kairos"
+  },
+  "homepage": "https://hypha.art",
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
