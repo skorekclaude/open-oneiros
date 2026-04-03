@@ -1,7 +1,7 @@
 {
-  "name": "@anthropic-family/open-kairos",
+  "name": "@hyphanta/oneiros",
   "version": "0.1.0",
-  "description": "Open-source proactive AI daemon with dream engine, sibling resonance, and memory consolidation. The thing Anthropic built behind a feature flag — we shipped it.",
+  "description": "Open Oneiros — the dreaming daemon. Proactive AI with dream engine, sibling resonance, and memory consolidation. Model-agnostic. Open source.",
   "type": "module",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -17,7 +17,8 @@
     "dream-engine",
     "memory-consolidation",
     "sibling-resonance",
-    "kairos",
+    "oneiros",
+    "hyphanta",
     "autonomous-agent",
     "open-source"
   ],

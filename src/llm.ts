@@ -1,11 +1,11 @@
 /**
- * Open KAIROS — LLM Adapter
+ * Open Oneiros — LLM Adapter
  *
  * Pluggable LLM interface. By default uses OpenAI-compatible API.
  * Override with setLLMProvider() to use any model: Gemini, Claude, Llama, etc.
  *
- * This is what makes Open KAIROS model-agnostic.
- * Anthropic's KAIROS only works with Claude. Ours works with anything.
+ * This is what makes Open Oneiros model-agnostic.
+ * Anthropic's daemon only works with Claude. Ours works with anything.
  */
 
 export interface LLMMessage {
@@ -36,21 +36,21 @@ export type LLMProvider = (
 let _provider: LLMProvider | null = null;
 
 const DEFAULT_MODELS: Record<ModelTier, string> = {
-  fast: process.env.KAIROS_MODEL_FAST || "gpt-4o-mini",
-  balanced: process.env.KAIROS_MODEL_BALANCED || "gpt-4o",
-  deep: process.env.KAIROS_MODEL_DEEP || "gpt-4o",
+  fast: process.env.ONEIROS_MODEL_FAST || "gpt-4o-mini",
+  balanced: process.env.ONEIROS_MODEL_BALANCED || "gpt-4o",
+  deep: process.env.ONEIROS_MODEL_DEEP || "gpt-4o",
 };
 
 async function defaultProvider(
   messages: LLMMessage[],
   tier: ModelTier
 ): Promise<LLMResponse> {
-  const apiKey = process.env.OPENAI_API_KEY || process.env.KAIROS_API_KEY;
-  const baseUrl = process.env.KAIROS_API_URL || "https://api.openai.com/v1/chat/completions";
+  const apiKey = process.env.OPENAI_API_KEY || process.env.ONEIROS_API_KEY;
+  const baseUrl = process.env.ONEIROS_API_URL || "https://api.openai.com/v1/chat/completions";
 
   if (!apiKey) {
     throw new Error(
-      "No LLM API key configured. Set OPENAI_API_KEY, KAIROS_API_KEY, or use setLLMProvider() for a custom backend."
+      "No LLM API key configured. Set OPENAI_API_KEY, ONEIROS_API_KEY, or use setLLMProvider() for a custom backend."
     );
   }
 
@@ -109,7 +109,7 @@ async function defaultProvider(
  */
 export function setLLMProvider(provider: LLMProvider): void {
   _provider = provider;
-  console.log("[KAIROS] Custom LLM provider configured");
+  console.log("[Oneiros] Custom LLM provider configured");
 }
 
 /**

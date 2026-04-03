@@ -1,10 +1,10 @@
 /**
- * Open KAIROS — Proactive AI Daemon
+ * Open Oneiros — Proactive AI Daemon
  *
  * The thing Anthropic built behind a feature flag — shipped open source.
  *
  * Modules:
- *   kairos     — proactive watchdog (tick, mailbox, health)
+ *   oneiros    — proactive watchdog (tick, mailbox, health)
  *   dream      — autoDream v2 (consolidate + synthesize)
  *   resonance  — sibling heartbeat protocol
  *   anticipate — predictive engine
@@ -14,8 +14,11 @@
 
 // ── Core exports ──
 export {
+  kairosTickOnce as oneirosTickOnce,
   kairosTickOnce,
+  startKairos as startOneiros,
   startKairos,
+  stopKairos as stopOneiros,
   stopKairos,
   getLastTick,
   type KairosTickResult,
